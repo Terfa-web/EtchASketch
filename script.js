@@ -3,9 +3,11 @@
 //create child div container and assign css prop
 const container = document.createElement('div')
       container.classList.add('container')
-      container.style.width = '100%';
+      container.style.width = '400px';
+      container.style.height='500px';
       container.style.display = 'flex';
       container.style.flexWrap = 'wrap';
+      container.style.pointerEvents = 'auto';
  
 //select the parent div pad from the document 
 const pad = document.querySelector('.pad');
@@ -76,8 +78,8 @@ const tranferProperty = (event) => {
   //loop through each node in the container 
   //first convert the nodes to an array lis
   Array.from(container).forEach(div => {
-    div.addEventListener('click', (e) => {
-      e.stopPropagation();
+    div.addEventListener('mouseover', (e) => {
+      
       e.target.classList.add(buttonClassName);
     })
   })
@@ -91,9 +93,9 @@ const tranferProperty = (event) => {
 corel.addEventListener('click', tranferProperty);
 multi.addEventListener('click', tranferProperty);
 eraser.addEventListener('click', tranferProperty);
-pink.addEventListener('click', tranferProperty);
-gridsize.addEventListener('click', changeGrid)
-clear.addEventListener('click', clearGrid)
+pink.addEventListener('click', tranferProperty );
+gridsize.addEventListener('click', changeGrid);
+clear.addEventListener('click', clearGrid );
 
 
 

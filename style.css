@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+
+
+
+
+html,
+body {
+  
+  font-family: poppins, roboto;
+  height: 100%;
+  
+}
+
+
+.container {
+  background-color: rgb(247, 247, 170);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  
+}
+
+.title {  
+  height: 100px;  
+  font-size: 70px;
+  font-weight: bold;
+  color: #4e4141;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+
+
+.middle {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  pointer-events: none;
+}
+
+.side-bar { 
+  width: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  pointer-events: none;
+  
+}
+
+.side-bar > div  button {
+  width: 120px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease-out;
+  pointer-events: auto;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  cursor:pointer;
+  color: rgb(184, 11, 11);
+  background-color: rgb(19, 11, 2);
+  font-size: 1.2rem;
+}
+
+div > button:active {
+  background-color: rgb(237, 233, 18);
+}
+
+
+
+.multicolor {
+ background-color: orange;
+
+}
+
+.pinkcolor {
+  background: pink;
+}
+
+
+.corel {
+  background-color: rgb(223, 15, 223);
+}
+
+.eraser {
+  background-color: white;
+}
+
+.pinkcolor , .multicolor, 
+.eraser, .clear, .gridsize, .corel {
+  height: 40px;
+  border-radius: 6px;
+  font-size: 1rem;
+  pointer-events: auto;
+}
+
+.pad {
+  background-color: white;
+  border-radius: 5px;
+  width: 400px;
+  display: flex;
+  
+  
+  pointer-events: none;
+  
+
+  
+}
+
+ .pad .container  {  
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  pointer-events: none;
+  border: 1px solid brown;  
+  width: 400px;
+}
+
+.footer {
+  pointer-events: none;
+}
+.footer  p{
+  display: flex;
+  align-items: center;
+   font-size: 20px;
+   pointer-events: none;
+}
