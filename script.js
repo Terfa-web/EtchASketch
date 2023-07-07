@@ -1,18 +1,18 @@
 
 
-//create child div container and assign css prop
-const container = document.createElement('div')
-      container.classList.add('container')
-      container.style.width = '400px';
-      container.style.height='500px';
-      container.style.display = 'flex';
-      container.style.flexWrap = 'wrap';
-      container.style.pointerEvents = 'auto';
+//create child div contain and assign css prop
+const contain = document.createElement('div')
+      contain.classList.add('contain')
+      contain.style.width = '400px';
+      contain.style.height='500px';
+      contain.style.display = 'flex';
+      contain.style.flexWrap = 'wrap';
+      contain.style.pointerEvents = 'auto';
  
 //select the parent div pad from the document 
 const pad = document.querySelector('.pad');
 
-//divide the container into default grid size
+//divide the contain into default grid size
 function createDefaultGrid () {
  let cell;
 for (let i = 0; i < 16; i++) {
@@ -21,11 +21,11 @@ for (let i = 0; i < 16; i++) {
     cell.classList.add("cell");
     cell.style.width = 'calc(100%/16)';
     cell.style.height = 'calc(100%/16)';
-    container.appendChild(cell);
+    contain.appendChild(cell);
   }
   
 }
-pad.appendChild(container);
+pad.appendChild(contain);
 }
 
 
@@ -46,7 +46,7 @@ const changeGrid = () => {
    if(num>=100) {
     alert('Enter values less than 100. Thank you')
    }
-  container.innerHTML = '';
+  contain.innerHTML = '';
  
   let newCell;
 for (let i = 0; i < num; i++) {
@@ -56,17 +56,17 @@ for (let i = 0; i < num; i++) {
     newCell.style.width = `calc(100%/${num})`;
     newCell.style.height = `calc(100%/${num})`;
   
-    container.appendChild(newCell);
+    contain.appendChild(newCell);
   }  
 }
 
 
- pad.appendChild(container); 
+ pad.appendChild(contain); 
 }
 
 //create function to clear the grid
 const clearGrid = () => {
- container.innerHTML = '';
+ contain.innerHTML = '';
  createDefaultGrid()
 }
 
@@ -74,10 +74,10 @@ const tranferProperty = (event) => {
   event.stopPropagation();
   const buttonClassName = event.target.className;
 
-  const container = document.querySelectorAll('.container > div');
-  //loop through each node in the container 
+  const contain = document.querySelectorAll('.contain > div');
+  //loop through each node in the contain 
   //first convert the nodes to an array lis
-  Array.from(container).forEach(div => {
+  Array.from(contain).forEach(div => {
     div.addEventListener('mouseover', (e) => {
       
       e.target.classList.add(buttonClassName);
